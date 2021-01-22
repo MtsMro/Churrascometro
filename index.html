@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Churrascometro</title>
 </head>
 <body>
 
-    <div id="container">
-        
-        <h1>CHURRASCOMETRO</h1>
-        <div id="adultos">
-            <input id="adultosQuantidade" type="number" placeholder="Adultos"><br>
-            <input id="porcentagemHomens" type="range" name="homens" min="0" max="100" step="10"><br>
-            <input id="porcentagemCerveja" type="range" name="cerveja" min="0" max="100" step="10"><br>
-        </div>
-        
-        <div id="criancas">
-            <input id="criancasQuantidade" type="number" placeholder="Crianças">
-        </div>
-        
-        <input id="periodo" type="number" placeholder="Período">
-        
-        <div id="carnes">
-            <input type="checkbox" name="bovina" checked> Bovina <br>
-            <input type="checkbox" name="linguica" checked> Linguiça <br>
-            <input type="checkbox" name="frango" checked> Frango <br>
-        </div>
+    <div class="container">
+        <div class="inputs">
+            <h1>CHURRASCOMETRO</h1>
+            <div class="adultos">
+                <input id="adultosQuantidade" type="number" placeholder="Adultos"><br>
+                <input id="porcentagemHomens" type="range" name="homens" min="0" max="100" step="10"><br>
+                <input id="porcentagemCerveja" type="range" name="cerveja" min="0" max="100" step="10"><br>
+            </div>
+            
+            <div class="criancas">
+                <input id="criancasQuantidade" type="number" placeholder="Crianças">
+            </div>
+            
+            <input id="periodo" type="number" placeholder="Período">
+            
+            <div class="carnes">
+                <input type="checkbox" name="bovina" checked> Bovina <br>
+                <input type="checkbox" name="linguica" checked> Linguiça <br>
+                <input type="checkbox" name="frango" checked> Frango <br>
+            </div>
 
-        <div>
-            <input type="checkbox" name="farofa" checked> Farofa <br>
-            <input type="checkbox" name="vinagrete" checked> Vinagrete <br>
-        </div>
-        
-        <button onclick="calcular()">Calcular</button>
+            <div>
+                <input type="checkbox" name="farofa" checked> Farofa <br>
+                <input type="checkbox" name="vinagrete" checked> Vinagrete <br>
+            </div>
+            
+            <button onclick="calcular()">Calcular</button>
+        </div>    
         <div id="resultado">
 
-        </div>    
+        </div>
+
     </div>
 
     <script src="script.js"></script>
