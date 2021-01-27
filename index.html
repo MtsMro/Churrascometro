@@ -11,25 +11,26 @@
     <div class="container">
         <div class="inputs">
             <h1>CHURRASCOMETRO</h1>
-            <div class="adultos">
-                <input id="adultosQuantidade" type="number" placeholder="Adultos"><br>
-                <input id="porcentagemCerveja" type="range" name="cerveja" min="0" max="100" step="10"><br>
+
+            <div id="input_num">
+                <input id="adultosQuantidade" class="insert" min="1" type="number" placeholder="Adultos" required >
+                <input id="criancasQuantidade" class="insert" min="1" type="number" placeholder="Crianças">
+                <input id="periodo" type="number" class="insert" min="1" placeholder="Período(h)">
             </div>
-            
-            <div class="criancas">
-                <input id="criancasQuantidade" type="number" placeholder="Crianças">
+            <div class="slideContainer">
+                <p>Adultos que bebem</p>
+                <input id="slider" type="range" name="cerveja" min="0" max="100" step="10" ><br>
             </div>
-            
-            <input id="periodo" type="number" placeholder="Período">
-            
             <div class="carnes">
-                <input type="checkbox" name="bovina" checked> Bovina <br>
-                <input type="checkbox" name="linguica" checked> Linguiça <br>
-                <input type="checkbox" name="frango" checked> Frango <br>
+                <p>Carnes</p>
+                <input type="checkbox" name="bovina" checked> Bovina
+                <input type="checkbox" name="linguica" checked> Linguiça
+                <input type="checkbox" name="frango" checked> Frango
             </div>
 
             <div>
-                <input type="checkbox" name="farofa" checked> Farofa <br>
+                <p>Acompanhamentos</p>
+                <input type="checkbox" name="farofa" checked> Farofa
                 <input type="checkbox" name="vinagrete" checked> Vinagrete <br>
             </div>
             

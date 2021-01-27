@@ -1,6 +1,24 @@
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+}
 .inputs{
     background-color: #a3b4a2;
     padding: 20px;
     max-width: 350px;
     margin-right: auto;
+    border-radius: 30px;
+    height: 100%;
+    text-align: center;
+}
+
+input{
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.insert{
+    border-radius: 10px;
+    padding-left: 10px;
+    box-shadow: 20px;
 }
