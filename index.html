@@ -16,10 +16,13 @@
                 <input id="adultosQuantidade" class="insert" min="1" type="number" placeholder="Adultos" required >
                 <input id="criancasQuantidade" class="insert" min="1" type="number" placeholder="Crianças">
                 <input id="periodo" type="number" class="insert" min="1" placeholder="Período(h)">
+                <p>Adultos que bebem:</p>
             </div>
-            <div class="slideContainer">
-                <p>Adultos que bebem</p>
-                <input id="slider" type="range" name="cerveja" min="0" max="100" step="10" ><br>
+            <div class="range">
+                <div class="slider">
+                    <input type="range" id="bar" min="0" max="100">
+                    <div class="value">50</div>
+                </div>
             </div>
             <div class="carnes">
                 <p>Carnes</p>
