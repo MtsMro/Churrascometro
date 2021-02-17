@@ -37,11 +37,21 @@
                 <input type="checkbox" name="vinagrete" checked> Vinagrete <br>
             </div>
             
-            <button onclick="calcular()">Calcular</button>
+            <button class="btn" onclick="calcular()">Calcular</button>
         </div>    
         <div id="resultado">
 
         </div>
+
+        <script>
+            const slider = document.querySelector("#bar");
+            const value = document.querySelector(".value");
+            value.textContent = slider.value;
+            slider.oninput = function(){
+                value.textContent = this.value;
+            }
+
+        </script>
 
     </div>
 
