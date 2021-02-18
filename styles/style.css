@@ -22,9 +22,6 @@ p{
     
 }
 
-.container{
-
-}
 
 .inputs{
     background-color: #333652;
@@ -80,36 +77,10 @@ p{
 
 .btn{
     border: 1px solid #FAD02C;
-    border-radius: 15px;
+    border-radius: 10px;
+    width: 290px;
+    height: 60px;
     background: none;
-    color: #FAD02C;
-    padding: 5px;
-    margin: 15px;
-    font-size: 15px;
-    width: 250px;
-    height: 40px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.btn:hover{
-    background: #FAD02C;
-    color: #333652;
-}
-
-.btn::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: -1;
-    transition: 0.5s;
-    top: 0;
-    border-radius: 0 0 50% 50%;
-}
-
-.btn:hover::before{
-    height: 180%;
+    font-size: 1.4em;
+    margin-top: 15px;
 }
