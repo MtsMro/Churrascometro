@@ -3,20 +3,19 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #E9EAEC;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #4C5355;
 }
 
 h1{
     font-size: 1.8em;
     text-align: center;
-    font-weight: 600;
-    color: #FAD02C;
+    color: #C44B4F;
     margin-bottom: 15px;
 }
 
 p{
-    color: #FAD02C;
+    color: #C44B4F;
     margin: 20px 0 10px;
     font-weight: 600;
     
@@ -24,13 +23,15 @@ p{
 
 
 .inputs{
-    background-color: #333652;
+    background-color: #CBCDCB;
+    border: 2px solid #4C5355;
     max-width: 350px;
     height: 100%;
-    margin-right: auto;
+    margin: auto;
     padding: 30px;
     border-radius: 20px;
     text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
 }
 
 .insert{
@@ -40,10 +41,10 @@ p{
 }
 
 .range{
-    border: 1px solid #FAD02C;
+    border: 1px solid #4C5355;
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
     align-items: center;
     display: flex;
     margin-top: 10px;
@@ -61,26 +62,33 @@ p{
     width: 100%;
     -webkit-appearance: none;
     outline: none;
-    background: #f2f2f2;
     border-radius: 30px;
-    
 }
 
 .range .value {
     font-size: 20px;
     margin-left: 15px;
     font-weight: 600;
-    color: #E9EAEC;
+    color: #4C5355;
     text-align: center;
-    width: 30px;
+    width: 40px;
+}
+
+.checkbox{
+    margin: 0 0 15px 15px;
+    background: #4C5355;
+    font-weight: bold;
+    
 }
 
 .btn{
-    border: 1px solid #FAD02C;
+    border: 1px solid #4C5355;
     border-radius: 10px;
     width: 290px;
     height: 60px;
     background: none;
     font-size: 1.4em;
     margin-top: 15px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
 }

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
     <title>Churrascometro</title>
 </head>
 <body>
@@ -26,15 +28,15 @@
             </div>
             <div class="carnes">
                 <p>Carnes</p>
-                <input type="checkbox" name="bovina" checked> Bovina
-                <input type="checkbox" name="linguica" checked> Linguiça
-                <input type="checkbox" name="frango" checked> Frango
+                <input class="checkbox" type="checkbox" name="bovina" checked> Bovina
+                <input class="checkbox" type="checkbox" name="linguica" checked> Linguiça
+                <input class="checkbox" type="checkbox" name="frango" checked> Frango
             </div>
 
             <div>
                 <p>Acompanhamentos</p>
-                <input type="checkbox" name="farofa" checked> Farofa
-                <input type="checkbox" name="vinagrete" checked> Vinagrete <br>
+                <input class="checkbox" type="checkbox" name="farofa" checked> Farofa
+                <input class="checkbox" type="checkbox" name="vinagrete" checked> Vinagrete <br>
             </div>
             
             <button class="btn" onclick="calcular()">Calcular</button>
