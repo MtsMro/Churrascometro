@@ -1,0 +1,57 @@
+//carnes - 450g por pessoa +6h=650g
+//bovina=270g-linguca=110g-frango=70g   +6h-> bovina=390g-linguica=160g-frango=100g
+//cerveja - 1.2L por pessoa +6h=2L
+//refrigerante/agua - 20% agua; 20% suco; 60% refri - - 1L por pessoa +6h=1.5L
+//crianca metade
+//farofa <= 10 pessoas = 500g; >10 = 1kg
+//vinagrete <= 10 pesspas 1kg; >10 2kg
+
+const slider = document.querySelector("#bar");
+            const value = document.querySelector(".value");
+            value.textContent = slider.value;
+            slider.oninput = function(){
+                value.textContent = this.value + "%";
+            }
+
+let inputAdultos = document.getElementById("adultos");
+let inputCriancas = document.getElementById("criancas");
+let inputPeriodo = document.getElementById("periodo");
+
+let resultado = document.getElementById("resultado");
+
+const calcular = () => {
+    console.log("Calculando...");
+
+    let adultos = inputAdultos.value;
+    let criancas = inputCriancas.value;
+    let periodo = inputPeriodo.value;
+    
+    let totalCarne = carnePP(periodo) * adultos + (carnePP(periodo)/2 * criancas);
+    let totalCerveja = cervejaPP(periodo) * adultos;
+    let totalBebida = bebidaPP(periodo) * adultos + (bebidaPP(periodo)/2 * criancas);
+
+    console.log(totalCarne/1000+" Kg de carne"); 
+    console.log(totalCerveja/1000+" L de cerveja"); 
+    console.log(totalBebida/1000+" L de bebida"); 
+}
+
+const carnePP = (periodo) => {
+    if(periodo >= 6)
+        return 650;
+    else
+        return 400;
+}
+
+const cervejaPP = (periodo) => {
+    if(periodo >= 6)
+        return 2000;
+    else
+        return 1200;
+}
+
+const bebidaPP = (periodo) => {
+    if(periodo >= 6)
+        return 1500;
+    else
+        return 1000;
+}

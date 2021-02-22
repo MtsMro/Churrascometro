@@ -70,10 +70,11 @@ p{
 .range .value {
     font-size: 20px;
     margin-left: 15px;
+    font-size: 1.1em;
     font-weight: 600;
     color: #4C5355;
     text-align: center;
-    width: 40px;
+    width: 60px;
 }
 
 .checkbox{

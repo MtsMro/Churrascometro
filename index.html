@@ -15,14 +15,14 @@
             <h1>CHURRASCOMETRO</h1>
 
             <div id="input_num">
-                <input id="adultosQuantidade" class="insert" min="1" type="number" placeholder="Adultos" required >
-                <input id="criancasQuantidade" class="insert" min="1" type="number" placeholder="Crianças">
-                <input id="periodo" type="number" class="insert" min="1" placeholder="Período(h)">
+                <input id="adultos" class="insert" min="1" type="number" placeholder="Adultos" required >
+                <input id="criancas" class="insert" min="0" type="number" placeholder="Crianças">
+                <input id="periodo" type="number" class="insert" min="1" placeholder="Período(h)" required >
                 <p>Adultos que bebem cerveja:</p>
             </div>
             <div class="range">
                 <div class="slider">
-                    <input type="range" id="bar" min="0" max="100">
+                    <input type="range" id="bar" min="0" max="100" step="10">
                     <div class="value">50</div>
                 </div>
             </div>
@@ -45,19 +45,10 @@
 
         </div>
 
-        <script>
-            const slider = document.querySelector("#bar");
-            const value = document.querySelector(".value");
-            value.textContent = slider.value;
-            slider.oninput = function(){
-                value.textContent = this.value;
-            }
-
-        </script>
+        <script src="scripts/app.js"></script>
 
     </div>
 
-    <script src="script.js"></script>
     
 </body>
 </html>
