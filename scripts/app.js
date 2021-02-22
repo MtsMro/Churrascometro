@@ -29,10 +29,16 @@ const calcular = () => {
     let totalCarne = carnePP(periodo) * adultos + (carnePP(periodo)/2 * criancas);
     let totalCerveja = cervejaPP(periodo) * adultos;
     let totalBebida = bebidaPP(periodo) * adultos + (bebidaPP(periodo)/2 * criancas);
+    let totalFarofa = farofaPP(periodo) * adultos + (farofaPP(periodo)/2 * criancas);
+    let totalVinagrete = vinagretePP(periodo) * adultos + (vinagretePP(periodo)/2 * criancas);
 
     console.log(totalCarne/1000+" Kg de carne"); 
     console.log(totalCerveja/1000+" L de cerveja"); 
-    console.log(totalBebida/1000+" L de bebida"); 
+    console.log(totalBebida/1000+" L de bebida");
+    console.log(totalFarofa/1000+" Kg de farofa");
+    console.log(totalVinagrete/1000+" Kg de vinagrete");
+    
+    
 }
 
 const carnePP = (periodo) => {
@@ -54,4 +60,18 @@ const bebidaPP = (periodo) => {
         return 1500;
     else
         return 1000;
+}
+
+const farofaPP = (periodo) => {
+    if(periodo >= 6)
+        return 500;
+    else
+        return 1000;
+}
+
+const vinagretePP = (periodo) => {
+    if(periodo >= 6)
+        return 1000;
+    else
+        return 2000;
 }
