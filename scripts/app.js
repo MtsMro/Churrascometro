@@ -1,5 +1,5 @@
 //carnes - 450g por pessoa +6h=650g
-//bovina=270g-linguca=110g-frango=70g   +6h-> bovina=390g-linguica=160g-frango=100g
+//bovina 60% - linguica 25% - frango 15%
 //cerveja - 1.2L por pessoa +6h=2L
 //refrigerante/agua - 20% agua; 20% suco; 60% refri - - 1L por pessoa +6h=1.5L
 //crianca metade
@@ -35,11 +35,17 @@ const calcular = () => {
     //variaveis receberao os valores e calcularao com base nas carnes selecionadas
     // retornar div com os resultados impressos
 
-    console.log(totalCarne/1000+" Kg de carne"); 
+    quantidadeCarne = distrCarne(totalCarne);
+
+    //console.log(totalCarne/1000+" Kg de carne"); 
     console.log(totalCerveja/1000+" L de cerveja"); 
     console.log(totalBebida/1000+" L de bebida");
-    console.log(totalFarofa/1000+" Kg de farofa");
-    console.log(totalVinagrete/1000+" Kg de vinagrete");
+
+    if (document.getElementById("farofa").checked == true)
+        console.log(totalFarofa/1000+" Kg de farofa");
+    
+    if (document.getElementById("vinagrete").checked == true)
+        console.log(totalVinagrete/1000+" Kg de vinagrete");
     
     
 }
@@ -77,4 +83,31 @@ const vinagretePP = (periodo) => {
         return 1000;
     else
         return 500;
+}
+
+
+const distrCarne = (total) => {
+    let bovina = document.getElementById("bovina").checked;
+    let linguica = document.getElementById("linguica").checked;
+    let frango = document.getElementById("frango").checked;
+
+    if (bovina && linguica && frango && true){
+        return (
+            console.log((total * .6) + "Kg de carne bovina"), 
+            console.log((total * .25) + "Kg de linguica"),
+            console.log((total * .15) + "Kg de frango")
+        );
+    }
+    else if (bovina && linguica && true){
+
+    }
+    else if (bovina && frango && true){
+
+    }
+    else if (linguica && frango && true){
+
+    }
+    else{
+
+    }
 }
