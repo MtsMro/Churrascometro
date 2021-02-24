@@ -98,16 +98,4 @@ const distrCarne = (total) => {
             console.log((total * .15) + "Kg de frango")
         );
     }
-    else if (bovina && linguica && true){
-
-    }
-    else if (bovina && frango && true){
-
-    }
-    else if (linguica && frango && true){
-
-    }
-    else{
-
-    }
 }
