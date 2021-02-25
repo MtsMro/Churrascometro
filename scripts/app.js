@@ -72,16 +72,16 @@ const bebidaPP = (periodo) => {
 
 const farofaPP = (periodo) => {
     if(periodo >= 6)
-        return 1000;
+        return 80;
     else
-        return 500;
+        return 50;
 }
 
 const vinagretePP = (periodo) => {
     if(periodo >= 6)
-        return 1000;
+        return 100;
     else
-        return 500;
+        return 80;
 }
 
 
@@ -89,20 +89,23 @@ const distrCarne = (total) => {
     let bovina = document.getElementById("bovina");
     let linguica = document.getElementById("linguica");
     let frango = document.getElementById("frango");
-    
+    let quantidade = 0;
     let carnes = [bovina, linguica, frango];
 
     for (carne of carnes){
         if (carne.checked){
             switch (carne.id){
                 case 'bovina':
-                    console.log(carne.id);
+                    quantidade = Math.ceil((total * .6)/1000)
+                    console.log(quantidade+ "Kg de carne "+carne.id);
                     break;
                 case 'linguica':
-                    console.log(carne.id);
+                    quantidade = Math.ceil((total * .25)/1000)
+                    console.log(quantidade+ "Kg de "+ carne.id);
                     break;
                 case 'frango':
-                    console.log(carne.id);
+                    quantidade = Math.ceil((total * .15)/1000)
+                    console.log(quantidade+ "Kg de "+ carne.id);
                     break;
             }
         }
