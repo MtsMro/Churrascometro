@@ -93,11 +93,19 @@ const distrCarne = (total) => {
     let carnes = [bovina, linguica, frango];
 
     for (carne of carnes){
-        console.log(carne.id);
+        if (carne.checked){
+            switch (carne.id){
+                case 'bovina':
+                    console.log(carne.id);
+                    break;
+                case 'linguica':
+                    console.log(carne.id);
+                    break;
+                case 'frango':
+                    console.log(carne.id);
+                    break;
+            }
+        }
     } 
     return
 }
-/* 
-switch (carne){
-    case 
-} */
