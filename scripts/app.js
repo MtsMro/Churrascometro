@@ -37,7 +37,6 @@ const calcular = () => {
 
     quantidadeCarne = distrCarne(totalCarne);
 
-    //console.log(totalCarne/1000+" Kg de carne"); 
     console.log(totalCerveja/1000+" L de cerveja"); 
     console.log(totalBebida/1000+" L de bebida");
 
@@ -87,15 +86,18 @@ const vinagretePP = (periodo) => {
 
 
 const distrCarne = (total) => {
-    let bovina = document.getElementById("bovina").checked;
-    let linguica = document.getElementById("linguica").checked;
-    let frango = document.getElementById("frango").checked;
+    let bovina = document.getElementById("bovina");
+    let linguica = document.getElementById("linguica");
+    let frango = document.getElementById("frango");
+    
+    let carnes = [bovina, linguica, frango];
 
-    if (bovina && linguica && frango && true){
-        return (
-            console.log((total * .6) + "Kg de carne bovina"), 
-            console.log((total * .25) + "Kg de linguica"),
-            console.log((total * .15) + "Kg de frango")
-        );
-    }
+    for (carne of carnes){
+        console.log(carne.id);
+    } 
+    return
 }
+/* 
+switch (carne){
+    case 
+} */
