@@ -35,10 +35,8 @@ const calcular = () => {
     //variaveis receberao os valores e calcularao com base nas carnes selecionadas
     // retornar div com os resultados impressos
 
-    quantidadeCarne = distrCarne(totalCarne);
-
-    console.log(totalCerveja/1000+" L de cerveja"); 
-    console.log(totalBebida/1000+" L de bebida");
+    imprimeCarne(totalCarne);
+    imprimeLiquidos(totalCerveja, totalBebida, slider.value);
 
     if (document.getElementById("farofa").checked == true)
         console.log(totalFarofa/1000+" Kg de farofa");
@@ -85,7 +83,7 @@ const vinagretePP = (periodo) => {
 }
 
 
-const distrCarne = (total) => {
+const imprimeCarne = (total) => {
     let bovina = document.getElementById("bovina");
     let linguica = document.getElementById("linguica");
     let frango = document.getElementById("frango");
@@ -111,4 +109,15 @@ const distrCarne = (total) => {
         }
     } 
     return
+}
+
+const imprimeLiquidos = (cerveja, bebida, porcentagem) => {
+    let decimal = porcentagem/100;
+    quantidadeCerveja = (cerveja * decimal)/1000;
+    quantidadeBebida = (bebida * (1-decimal))/1000;
+    console.log(1-decimal);
+    quantidadeCerveja? console.log(quantidadeCerveja + " L de cerveja"):"";
+    quantidadeBebida? console.log(quantidadeBebida + " L de bebidas"):"";
+
+
 }
