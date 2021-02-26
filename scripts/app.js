@@ -84,29 +84,24 @@ const vinagretePP = (periodo) => {
 
 
 const imprimeCarne = (total) => {
-    let bovina = document.getElementById("bovina");
-    let linguica = document.getElementById("linguica");
-    let frango = document.getElementById("frango");
     let quantidade = 0;
-    let carnes = [bovina, linguica, frango];
+    let carnes = ["bovina", "linguica", "frango"];
 
     for (carne of carnes){
-        if (carne.checked){
-            switch (carne.id){
-                case 'bovina':
-                    quantidade = Math.ceil((total * .6)/1000)
-                    console.log(quantidade+ "Kg de carne "+carne.id);
-                    break;
-                case 'linguica':
-                    quantidade = Math.ceil((total * .25)/1000)
-                    console.log(quantidade+ "Kg de "+ carne.id);
-                    break;
-                case 'frango':
-                    quantidade = Math.ceil((total * .15)/1000)
-                    console.log(quantidade+ "Kg de "+ carne.id);
-                    break;
+        switch (carne){
+            case 'bovina':
+                quantidade = Math.ceil((total * .6)/1000)
+                console.log(quantidade+ "Kg de carne bovina");
+                break;
+            case 'linguica':
+                quantidade = Math.ceil((total * .25)/1000)
+                console.log(quantidade+ "Kg de linguiça");
+                break;
+            case 'frango':
+                quantidade = Math.ceil((total * .15)/1000)
+                console.log(quantidade+ "Kg de frango");
+                break;
             }
-        }
     } 
     return
 }
