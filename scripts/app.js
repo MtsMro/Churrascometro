@@ -43,7 +43,7 @@ const calcular = () => {
     
     if (document.getElementById("vinagrete").checked == true)
         console.log(totalVinagrete/1000+" Kg de vinagrete");
-    
+        
     
 }
 
@@ -92,14 +92,17 @@ const imprimeCarne = (total) => {
             case 'bovina':
                 quantidade = Math.ceil((total * .6)/1000)
                 console.log(quantidade+ "Kg de carne bovina");
+                resultado.innerHTML = `<p>${quantidade} Kg de carne bovina</p>`
                 break;
             case 'linguica':
                 quantidade = Math.ceil((total * .25)/1000)
                 console.log(quantidade+ "Kg de linguiça");
+                resultado.innerHTML += `<p>${quantidade} Kg de linguiça</p>`
                 break;
             case 'frango':
                 quantidade = Math.ceil((total * .15)/1000)
                 console.log(quantidade+ "Kg de frango");
+                resultado.innerHTML += `<p>${quantidade} Kg de frango</p>`
                 break;
             }
     } 
@@ -108,11 +111,13 @@ const imprimeCarne = (total) => {
 
 const imprimeLiquidos = (cerveja, bebida, porcentagem) => {
     let decimal = porcentagem/100;
-    quantidadeCerveja = (cerveja * decimal)/1000;
-    quantidadeBebida = (bebida * (1-decimal))/1000;
+    quantidadeCerveja = Math.ceil((cerveja * decimal)/1000);
+    quantidadeBebida = Math.ceil((bebida * (1-decimal))/1000);
     console.log(1-decimal);
     quantidadeCerveja? console.log(quantidadeCerveja + " L de cerveja"):"";
+    quantidadeCerveja? (resultado.innerHTML += `<p>${quantidadeCerveja} L de cerveja</p>`):"";
     quantidadeBebida? console.log(quantidadeBebida + " L de bebidas"):"";
+    quantidadeBebida? (resultado.innerHTML += `<p>${quantidadeBebida} L de bebidas</p>`):"";
 
-
+    return;
 }
