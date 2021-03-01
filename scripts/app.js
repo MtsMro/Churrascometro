@@ -1,11 +1,3 @@
-//carnes - 450g por pessoa +6h=650g
-//bovina 60% - linguica 25% - frango 15%
-//cerveja - 1.2L por pessoa +6h=2L
-//refrigerante/agua - 20% agua; 20% suco; 60% refri - - 1L por pessoa +6h=1.5L
-//crianca metade
-//farofa <= 10 pessoas = 500g; >10 = 1kg
-//vinagrete <= 10 pesspas 1kg; >10 2kg
-
 const slider = document.querySelector("#bar");
             const value = document.querySelector(".value");
             value.textContent = slider.value;
