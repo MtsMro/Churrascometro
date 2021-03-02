@@ -116,3 +116,15 @@ const imprimeAcompanhamentos = (farofa, vinagrete) => {
     if (document.getElementById("vinagrete").checked == true)
         resultado.innerHTML += `<p>${vinagrete} g de vinagrete</p>`    
 }
+
+const verifica = () => {
+    let adultos = document.getElementById("adultos");
+    let periodo = document.getElementById("periodo");
+
+    if ((adultos.value==0) || (periodo.value==0)){
+        window.alert("Os dados não foram inseridos corretamente, por favor insira o periodo e o numero de adultos do churrasco.");
+    }
+    else{
+        calcular();
+    }
+}
