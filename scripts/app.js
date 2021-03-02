@@ -23,20 +23,15 @@ const calcular = () => {
     let totalBebida = bebidaPP(periodo) * adultos + (bebidaPP(periodo)/2 * criancas);
     let totalFarofa = farofaPP(periodo) * adultos + (farofaPP(periodo)/2 * criancas);
     let totalVinagrete = vinagretePP(periodo) * adultos + (vinagretePP(periodo)/2 * criancas);
+    console.log(vinagretePP(periodo));
 
     //variaveis receberao os valores e calcularao com base nas carnes selecionadas
     // retornar div com os resultados impressos
 
     imprimeCarne(totalCarne);
     imprimeLiquidos(totalCerveja, totalBebida, slider.value);
+    imprimeAcompanhamentos(totalFarofa, totalVinagrete);
 
-    if (document.getElementById("farofa").checked == true)
-        console.log(totalFarofa/1000+" Kg de farofa");
-    
-    if (document.getElementById("vinagrete").checked == true)
-        console.log(totalVinagrete/1000+" Kg de vinagrete");
-        
-    
 }
 
 const carnePP = (periodo) => {
@@ -112,4 +107,12 @@ const imprimeLiquidos = (cerveja, bebida, porcentagem) => {
     quantidadeBebida? (resultado.innerHTML += `<p>${quantidadeBebida} L de bebidas</p>`):"";
 
     return;
+}
+
+const imprimeAcompanhamentos = (farofa, vinagrete) => {
+    if (document.getElementById("farofa").checked == true)
+        resultado.innerHTML += `<p>${farofa} g de farofa</p>`
+
+    if (document.getElementById("vinagrete").checked == true)
+        resultado.innerHTML += `<p>${vinagrete} g de vinagrete</p>`    
 }
