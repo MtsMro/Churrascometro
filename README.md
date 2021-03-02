@@ -4,7 +4,7 @@ Projeto desenvolvido com *HTML, CSS e JavaScript* de uma calculadora de consumo 
 
 ## Teste
 
-Link de acesso: 
+Link de acesso: https://marinhomateus.github.io/Churrascometro/
 
 ## Sobre o Projeto
 
