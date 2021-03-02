@@ -1,5 +1,5 @@
 ﻿# **Churrascometro**
-***
+ 
 Projeto desenvolvido com *HTML, CSS e JavaScript* de uma calculadora de consumo aproximado em um churrasco com base em seu periodo.
 
 ## Teste
